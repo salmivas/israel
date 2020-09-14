@@ -1,0 +1,26 @@
+.top-wrapper {
+  min-height: 64vw;
+
+  background-color: $sepia;
+  background-image: url("../img/top-wrapper_desktop_background@1x.jpg");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi) {
+    background-image: url("../img/top-wrapper_desktop_background@2x.jpg");
+
+    @media (max-width: $max-mobile-width) {
+      background-image: url("../img/top-wrapper_mobile_background@2x.jpg");
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    min-height: 620px;
+    padding: 0 0 7px;
+
+    background-image: url("../img/top-wrapper_mobile_background@1x.jpg");
+    background-position: left 50% top 32px;
+    background-size: initial;
+  }
+}

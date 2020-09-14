@@ -1,0 +1,22 @@
+$mobile-width: 320px;
+$max-mobile-width: 767px;
+$tablet-width: 768px;
+$max-tablet-width: 1023px;
+$desktop-width: 1024px;
+$max-desktop-width: 1366px;
+$retina-dpi: 144dpi;
+
+$black: hsl(0, 0%, 28%); // #474747
+$sepia: hsl(14, 9%, 46%); // #80706B
+$sky-blue: hsl(196, 97%, 55%); // #1DC0FC
+$orange: hsl(41, 100%, 63%); // #FFC341
+$white: hsl(0, 0%, 100%);
+$red: hsl(0, 100%, 50%); // #FF0000
+$porcelain: hsl(0, 0%, 96%); // #F5F5F5
+
+$__: hsl(41, 100%, 63%);
+
+$icon-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.05);
+$icon-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.12);
+$bubble-shadow: 0 3px 12px hsla(0, 0%, 0%, 0.1);
+$button-shadow: radial-gradient(150% 119.49% at 50% 50.85%, hsla(0, 0%, 0%, 0) 30.67%, hsla(0, 0%, 1%, 0.24) 100%);

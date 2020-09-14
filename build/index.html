@@ -1,13 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <h1>Добро пожаловать в Лигу А.</h1>
-</body>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="Description" content="Израиль">
+    <title>Израиль</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/FiraSans-Regular.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/FiraSans-Medium.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/FiraSans-Bold.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/ralewayextrabold.woff2" as="font" type="font/woff2">
+  </head>
+
+  <body>
+    <div style="display:none;">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-to-description" viewBox="0 0 76 130">
+  <circle id="dash" cx="37.96" cy="37.96" r="37.46" fill="none" stroke-dasharray="5 5" stroke-dashoffset="314"></circle>
+  <circle cx="38.1" cy="37.82" r="26.36" fill="none"></circle>
+  <rect x="29.1" y="23.94" width="16.84" height="25.64" rx="8.42" fill="none" stroke-width="2"></rect>
+  <rect x="37.3" y="75.3" width="1.44" height="54.96" opacity="0.53"></rect>
+  <rect x="36.34" y="30.42" width="3.12" height="6.24"></rect>
+</symbol></svg>
+    </div>
+    <div class="top-wrapper">
+      <header class="header">
+        <div class="header__container">
+          <a class="header__logo">
+            <picture>
+              <source type="image/webp" srcset="img/header_logo@1x.webp 1x, img/header_logo@2x.webp 2x">
+              <!-- 1х: 137px; 2x: 274px -->
+              <img src="img/header_logo@1x.png" srcset="img/header_logo@2x.png 2x" alt="Логотип" width="137" height="48">
+            </picture>
+          </a>
+          <div class="header__contacts">
+            <a href="tel:+97226216581" class="header__phone">+ (972) 2 – 621 – 6581</a>
+            <button class="header__callback">Заказать звонок</button>
+          </div>
+        </div>
+      </header>
+      <section class="intro">
+        <h1>Учёба, путешествие и карьера для еврейской молодёжи</h1>
+        <a class="intro__scroll" href="#about" aria-label="Прейти к описанию">
+          <svg width="76" height="130" viewbox="0 0 76 130" role="img">
+            <use xlink:href="#icon-to-description"></use>
+          </svg>
+        </a>
+      </section>
+    </div>
+    <main></main>
+    <footer></footer>
+    <script src="vendor/swiper.js"></script>
+    <script src="vendor/picturefill.js"></script>
+    <script src="vendor/imask.js"></script>
+    <!-- <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script> -->
+  </body>
+
 </html>

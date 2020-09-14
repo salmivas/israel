@@ -1,0 +1,7 @@
+<svg width="76" height="130" viewBox="0 0 76 130">
+  <circle id="dash" cx="37.96" cy="37.96" r="37.46" fill="none" stroke-dasharray="5 5" stroke-dashoffset="314"/>
+  <circle cx="38.1" cy="37.82" r="26.36" fill="none"/>
+  <rect x="29.1" y="23.94" width="16.84" height="25.64" rx="8.42" fill="none" stroke-width="2"/>
+  <rect x="37.3" y="75.3" width="1.44" height="54.96" opacity="0.53"/>
+  <rect x="36.34" y="30.42" width="3.12" height="6.24"/>
+</svg>

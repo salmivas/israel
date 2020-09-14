@@ -1,0 +1,111 @@
+.header {
+  @media (max-width: $max-mobile-width) {
+    background-image: linear-gradient(to bottom, $white 32px, transparent 32px);
+  }
+}
+
+.header__container {
+  position: relative;
+
+  width: 100%;
+  max-width: 1206px;
+  margin: 0 auto;
+  padding: 30px;
+  box-sizing: border-box;
+
+  @media (max-width: $max-mobile-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 3% 20px 5%;
+  }
+}
+
+.header__contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+
+  @media (max-width: $max-mobile-width) {
+    width: auto;
+    height: 100%;
+    padding: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    & > :not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.header__phone {
+  @include font-size-height-color(15, 18, $black);
+  @include on-hover;
+
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @media (max-width: $max-mobile-width) {
+    @include font-size-height-color(14, 17, $black);
+
+    order: 2;
+    margin: 0;
+  }
+}
+
+.header__logo {
+  position: absolute;
+  left: calc((100% - 137px) / 2);
+  top: 32%;
+
+  line-height: 0;
+
+  @media (max-width: $max-mobile-width) {
+    position: static;
+
+    padding: 0;
+  }
+}
+
+.header__callback {
+  @include button-style-reset;
+  @include font-size-height-color(14, 14, $black);
+  @include on-hover(false, true);
+
+  margin-right: 5px;
+
+  letter-spacing: -0.2px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border-bottom: 2px dashed $black;
+
+  @media (max-width: $max-mobile-width) {
+    @include font-size-height-color(13, 17);
+
+    order: 3;
+    margin: 0;
+  }
+}
+
+.header__callback span {
+  @include font-size-height-color(14, 17, $black);
+
+  letter-spacing: -0.2px;
+}
+
+.header__logo img {
+  width: 137px;
+  height: 48px;
+
+  @media (max-width: $max-mobile-width) {
+    width: 120px;
+    height: 42px;
+  }
+}

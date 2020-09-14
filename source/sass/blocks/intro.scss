@@ -1,0 +1,37 @@
+.intro {
+  @include center-y-by-flex-column;
+
+  padding: calc(50% - 242px) 0 20px;
+
+  @media (max-width: $max-mobile-width) {
+    padding: 251px 0 10px;
+  }
+}
+
+.intro h1 {
+  @include font-size-height-color(24, 29, $white);
+
+  max-width: 350px;
+  margin: 0 0 31px;
+
+  font-weight: bold;
+  text-align: center;
+
+  @media (max-width: $max-mobile-width) {
+    max-width: 300px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.intro__scroll {
+  line-height: 0;
+}
+
+.intro__scroll svg {
+  @include on-hover(true);
+
+  fill: $white;
+  stroke: $white;
+}
