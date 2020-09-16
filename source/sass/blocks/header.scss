@@ -1,6 +1,6 @@
 .header {
   @media (max-width: $max-mobile-width) {
-    background-image: linear-gradient(to bottom, $white 32px, transparent 32px);
+    background-image: linear-gradient(to bottom, $white 32px, $transparent 32px);
   }
 }
 
@@ -75,7 +75,7 @@
 .header__callback {
   @include button-style-reset;
   @include font-size-height-color(14, 14, $black);
-  @include on-hover(false, true);
+  @include on-hover(false, false, true);
 
   margin-right: 5px;
 

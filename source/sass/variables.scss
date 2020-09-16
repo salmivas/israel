@@ -6,19 +6,22 @@ $desktop-width: 1024px;
 $max-desktop-width: 1366px;
 $retina-dpi: 144dpi;
 
-$black: hsl(0, 0%, 28%); // #474747
+$black: hsl(0, 0%, 28%); // #484848
 $sepia: hsl(14, 9%, 46%); // #80706B
 $sky-blue: hsl(196, 97%, 55%); // #1DC0FC
+$red: hsl(0, 100%, 50%); // #FF0000
 $orange: hsl(41, 100%, 63%); // #FFC341
+$pineapple: hsl(51, 100%, 50%); // #FFD701
 $mustard: hsl(36, 68%, 57%);
 $white: hsl(0, 0%, 100%);
-$red: hsl(0, 100%, 50%); // #FF0000
 $porcelain: hsl(0, 0%, 96%); // #F5F5F5
+$transparent: hsla(0, 0%, 0%, 0); // rgba(0, 0, 0, 0.05)
 $transparent-5: hsla(0, 0%, 0%, 0.05); // rgba(0, 0, 0, 0.05)
 
-$__: hsl(41, 100%, 63%);
+$__: hsl(0, 0%, 28%);
 
 $icon-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.05);
-$icon-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.12);
+$text-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.12);
 $bubble-shadow: 0 3px 12px hsla(0, 0%, 0%, 0.1);
 $button-shadow: radial-gradient(150% 119.49% at 50% 50.85%, hsla(0, 0%, 0%, 0) 30.67%, hsla(0, 0%, 1%, 0.24) 100%);
+$button-normal: linear-gradient(108.42deg, $orange 20.46%, $pineapple 65.31%);

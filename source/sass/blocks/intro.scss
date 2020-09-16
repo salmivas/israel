@@ -30,7 +30,7 @@
 }
 
 .intro__scroll svg {
-  @include on-hover(true);
+  @include on-hover(true, true);
 
   fill: $white;
   stroke: $white;

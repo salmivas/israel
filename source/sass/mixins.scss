@@ -50,7 +50,7 @@
   align-items: center;
 }
 
-@mixin font-size-height-color($size, $height, $color: false) {
+@mixin font-size-height-color($size, $height: $size, $color: false) {
   font-size: #{$size}px;
   line-height: #{$height}px;
 
@@ -59,17 +59,18 @@
   }
 }
 
-@mixin on-hover($fill: false, $border-bottom: false) {
+@mixin on-hover($fill: false, $stroke: false, $border-bottom: false) {
   @media (min-width: $desktop-width) {
     &:hover {
       cursor: pointer;
 
       color: $orange;
 
-      transition: color 0.1s ease-out;
-
       @if $fill {
         fill: $orange;
+      }
+
+      @if $stroke {
         stroke: $orange;
       }
 
@@ -120,7 +121,7 @@
     height: 0;
     border-style: solid;
     border-width: #{$diam / $_y-ratio}px #{$diam / $_x-ratio}px;
-    border-color: transparent transparent transparent $sky-blue;
+    border-color: $transparent $transparent $transparent $sky-blue;
   }
 
   @media (min-width: $desktop-width) {
@@ -147,8 +148,24 @@
       &::after {
         z-index: 2;
 
-        border-color: transparent transparent transparent $sky-blue;
+        border-color: $transparent $transparent $transparent $sky-blue;
       }
     }
   }
+}
+
+@mixin button-text-style {
+  text-shadow: $text-shadow;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 500;
+  color: $white;
+}
+
+@mixin button-style {
+  @include button-text-style;
+  @include font-size-height-color(14, 16);
+
+  background: $button-normal;
+  border: none;
 }
