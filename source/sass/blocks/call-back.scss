@@ -1,0 +1,103 @@
+.call-back {
+  background-image: url("../img/call-back_backpack@1x.jpg"), url("../img/call-back_girl@1x.jpg");
+  background-position: top 146px left -72px, top -7px right calc((100% - 546px) / 1.5);
+  background-size: 220px 262px, 818px 594px;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi) {
+    background-image: url("../img/call-back_backpack@2x.jpg"), url("../img/call-back_girl@2x.jpg");
+  }
+
+  @media (max-width: $max-tablet-width) {
+    background-size: 157px, 600px;
+    background-position: top 146px left -72px, top 100px right calc((100% - 546px) / 1.5);
+  }
+
+  @media (max-width: $max-mobile-width) {
+    background-image: url("../img/call-back_backpack@1x.jpg"), url("../img/call-back_girl@1x.jpg");
+    background-size: 157px, 131%;
+    background-position: top 10% left -55px, bottom 2px left 50%;
+  }
+}
+
+.call-back__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 69.3%;
+  max-width: $max-desktop-width;
+  margin: 0 auto;
+  padding: 202px 0 135px;
+
+  @media (max-width: $max-tablet-width) {
+    width: auto;
+    padding: 135px calc(15% - 90px);
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: auto;
+    align-items: center;
+    padding: 79px 17px 96%;
+  }
+}
+
+.call-back__container h2 {
+  margin: 0 0 24px;
+
+  @media (max-width: $max-tablet-width) {
+    width: 100%;
+  }
+}
+
+.call-back__description {
+  @include font-size-height-color(17, 29);
+
+  margin: 0 0 64px;
+  padding-right: calc(100% - 375px);
+
+  @media (max-width: $max-tablet-width) {
+    @include font-size-height-color(16, 26);
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin: 0 0 24px;
+    padding-right: 0;
+  }
+}
+
+.call-back form {
+  @media (max-width: $max-mobile-width) {
+    @include center-y-by-flex-column;
+
+    width: 100%;
+  }
+}
+
+.call-back label {
+  @include visually-hidden;
+}
+
+.call-back input {
+  @include input-style;
+
+  margin-right: -54px;
+  min-width: 270px;
+  padding: 19px 105px 16px 38px;
+  box-sizing: border-box;
+
+  @media (max-width: $max-mobile-width) {
+    margin: 0 0 8px;
+    min-width: unset;
+    width: 100%;
+    padding: 20px 38px 16px;
+    box-sizing: border-box;
+  }
+}
+
+.call-back button {
+  @include oval-button-style;
+
+  @media (max-width: $max-mobile-width) {
+    width: 92%;
+  }
+}

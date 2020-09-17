@@ -169,3 +169,35 @@
   background: $button-normal;
   border: none;
 }
+
+@mixin oval-button-style {
+  @include button-style-reset;
+  @include button-style;
+
+  padding: 23px 41px 20px;
+
+  letter-spacing: 0.85px;
+
+  border-radius: 30px;
+}
+
+@mixin input-style {
+  @include input-style-reset;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.98px;
+  text-transform: uppercase;
+
+  border: 2px solid $cloud;
+  border-radius: 30px;
+
+  &::placeholder {
+    color: $black-transparent-50;
+  }
+
+  &:focus {
+    border: 2px solid $orange;
+  }
+}
