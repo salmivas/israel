@@ -30,14 +30,13 @@
   padding: 202px 0 135px;
 
   @media (max-width: $max-tablet-width) {
-    width: auto;
-    padding: 135px calc(15% - 90px);
+    width: 90%;
+    padding: 135px 0;
   }
 
   @media (max-width: $max-mobile-width) {
-    width: auto;
     align-items: center;
-    padding: 79px 17px 96%;
+    padding: 79px 0 96%;
   }
 }
 
@@ -49,11 +48,11 @@
   }
 }
 
-.call-back__description {
-  @include font-size-height-color(17, 29);
+.call-back__container h2 + p {
+  @include font-size-height-color(17, 29, $black-transparent-87);
 
   margin: 0 0 64px;
-  padding-right: calc(100% - 375px);
+  max-width: calc(10% + 284px);
 
   @media (max-width: $max-tablet-width) {
     @include font-size-height-color(16, 26);
@@ -61,15 +60,27 @@
 
   @media (max-width: $max-mobile-width) {
     margin: 0 0 24px;
-    padding-right: 0;
+    max-width: none;
   }
 }
 
 .call-back form {
+  display: flex;
+  flex-wrap: nowrap;
+
   @media (max-width: $max-mobile-width) {
     @include center-y-by-flex-column;
 
     width: 100%;
+  }
+}
+
+.call-back .form-input {
+  margin: 0 -50px 0 0;
+
+  @media (max-width: $max-mobile-width) {
+    margin: 0 0 8px;
+    width: calc(20% + 230px);
   }
 }
 
@@ -80,14 +91,12 @@
 .call-back input {
   @include input-style;
 
-  margin-right: -54px;
+  display: block;
   min-width: 270px;
   padding: 19px 105px 16px 38px;
   box-sizing: border-box;
 
   @media (max-width: $max-mobile-width) {
-    margin: 0 0 8px;
-    min-width: unset;
     width: 100%;
     padding: 20px 38px 16px;
     box-sizing: border-box;
@@ -98,6 +107,6 @@
   @include oval-button-style;
 
   @media (max-width: $max-mobile-width) {
-    width: 92%;
+    width: calc(20% + 205px);
   }
 }

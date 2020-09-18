@@ -16,9 +16,6 @@
   </head>
 
   <body>
-    <div style="display:none;">
-      <include src="build/img/sprite_auto.svg"></include>
-    </div>
     <div class="top-wrapper">
       <header class="header">
         <div class="header__container">
@@ -39,7 +36,7 @@
         <h1>Учёба, путешествие и карьера для еврейской молодёжи</h1>
         <a class="intro__scroll" href="#about" aria-label="Прейти к описанию">
           <svg width="76" height="130" viewbox="0 0 76 130" role="img">
-            <use xlink:href="#icon-to-description"></use>
+            <use xlink:href="img/sprite_auto.svg#icon-to-description"></use>
           </svg>
         </a>
       </section>
@@ -60,31 +57,31 @@
           <ul class="programs__names">
             <li>
               <svg width="32" height="36" role="img">
-                <use xlink:href="#icon-star-of-david"></use>
+                <use xlink:href="img/sprite_auto.svg#icon-star-of-david"></use>
               </svg>
               <span>Общие</span>
             </li>
             <li>
               <svg width="36" height="35" role="img">
-                <use xlink:href="#icon-square-cap"></use>
+                <use xlink:href="img/sprite_auto.svg#icon-square-cap"></use>
               </svg>
               <span>Академические</span>
             </li>
             <li>
               <svg width="32" height="25" role="img">
-                <use xlink:href="#icon-case"></use>
+                <use xlink:href="img/sprite_auto.svg#icon-case"></use>
               </svg>
               <span>Стажировки</span>
             </li>
             <li>
               <svg width="34" height="30" role="img">
-                <use xlink:href="#icon-volunteering"></use>
+                <use xlink:href="img/sprite_auto.svg#icon-volunteering"></use>
               </svg>
               <span>Волонтёрство</span>
             </li>
             <li>
               <svg width="23" height="25" role="img">
-                <use xlink:href="#icon-menorah"></use>
+                <use xlink:href="img/sprite_auto.svg#icon-menorah"></use>
               </svg>
               <span>Религиозные</span>
             </li>
@@ -121,13 +118,31 @@
       <section class="call-back">
         <div class="call-back__container">
           <h2>Хочу поехать!</h2>
-          <p class="call-back__description">Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!
+          <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!
           </p>
           <form action="#" method="post" autocomplete="off">
-            <label for="call-back__user-phone">Телефон</label>
-            <input id="call-back__user-phone" name="phone" placeholder="Телефон" type="tel" required>
+            <div class="form-input">
+              <label for="call-back__user-phone">Телефон</label>
+              <input id="call-back__user-phone" name="phone" placeholder="Телефон" type="tel" required>
+            </div>
             <button type="submit" name="Перезвоните мне" aria-label="Перезвоните мне"><span>Перезвоните мне</span></button>
           </form>
+        </div>
+      </section>
+      <section class="requirements">
+        <div class="requirements__outer-container">
+          <div class="requirements__inner-container">
+            <h2>Как поехать</h2>
+            <p>Чтобы узнать подробнее о программе, свяжитесь с координатором в вашем городе. Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.</p>
+            <p>Чтобы иметь возможность получить грант на обучение от 4200 до 8400$, вы должны:</p>
+            <ul>
+              <li>Быть в возрасте от 16 до 30 лет</li>
+              <li>Иметь оконченное среднее образование</li>
+              <li>Иметь документально подтверждённые еврейские корни и пройти консульскую проверку</li>
+              <li>За последние 2 года быть не больше 3х месяцев подряд непрерывно в Израиле.</li>
+            </ul>
+            <p>Если вы не подходите по этим правилам, вы всё равно можете принять участие в программе «Маса», оплатив её полную стоимость.</p>
+          </div>
         </div>
       </section>
     </main>
@@ -135,6 +150,7 @@
     <script src="vendor/swiper.js"></script>
     <script src="vendor/picturefill.js"></script>
     <script src="vendor/imask.js"></script>
+    <script src="vendor/svg4everybody.js"></script>
     <script src="programs.js"></script>
     <!-- <script src="js/vendor.js"></script>
     <script src="js/main.js"></script> -->

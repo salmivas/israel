@@ -181,6 +181,10 @@
   border-radius: 30px;
 }
 
+@mixin incorrect-input {
+
+}
+
 @mixin input-style {
   @include input-style-reset;
 

@@ -24,7 +24,7 @@
   padding: 98px 0 18px;
 
   @media (max-width: $max-tablet-width) {
-    align-items: center;
+    justify-content: center;
     padding: 0;
 
     width: auto;
@@ -78,6 +78,8 @@
   margin: 0 0 5px;
   padding: 15px 30px 17px 20px;
 
+  color: $black-transparent-87;
+
   @media (max-width: $max-tablet-width) {
     @include font-size-height-color(15);
 
@@ -123,6 +125,10 @@
 
       fill: $white;
     }
+
+    & svg {
+      filter: drop-shadow($icon-shadow);
+    }
   }
 }
 
@@ -156,16 +162,18 @@
   box-sizing: border-box;
 
   @media (max-width: $max-tablet-width) {
+    width: 90%;
+    padding: 0;
+  }
+
+  @media (max-width: $max-mobile-width) {
     width: auto;
     padding: 0 calc(15% - 90px);
   }
 }
 
 .programs__descriptions li {
-  box-sizing: border-box;
-
   @media (max-width: $max-mobile-width) {
-    width: 95%;
     margin-left: 5%;
     padding: 31px 0 0 0;
   }
@@ -190,6 +198,8 @@
 
 .programs__descriptions p {
   margin: 0;
+
+  color: $black-transparent-87;
 
   &:not(:last-of-type) {
     margin-bottom: 15px;

@@ -1,0 +1,224 @@
+.requirements {
+  position: relative;
+
+  background-image: url("../img/requirements_top-stain@1x.png"), url("../img/requirements_stamp@1x.png");
+  background-position: right 0 top 333px, right -120px top 365px;
+  background-size: 301px 266px, 337px 254px;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi) {
+    background-image: url("../img/requirements_top-stain@2x.png"), url("../img/requirements_stamp@2x.png");
+  }
+
+  @media (max-width: $max-tablet-width) {
+    background-position: right 0 top 233px, right calc(60% - 400px) top 265px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    background-image: url("../img/requirements_stamp@1x.png");
+
+    background-size: 264px 199px;
+    background-position: top 52% right calc((100% - 264px) / 4.3);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -220px;
+    right: 0;
+    z-index: 1;
+
+    width: 180px;
+    height: 447px;
+
+    background-image: url("../img/requirements_bottom-stain@1x.png");
+    background-size: contain;
+
+    @media (min-resolution: $retina-dpi) {
+      background-image: url("../img/requirements_bottom-stain@2x.png");
+    }
+
+    @media (max-width: $max-tablet-width) {
+      content: none;
+    }
+  }
+}
+
+.requirements__outer-container {
+  max-width: $max-desktop-width;
+  margin: 0 auto;
+}
+
+.requirements__inner-container {
+  padding: 13.7% calc(20% - 137px) 9.3% 51.1%;
+
+  background-image: url("../img/requirements_photo@1x.jpg");
+  background-position: 11px calc(10% + 83px);
+  background-size: calc((100% - 115px) / 2);
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi) {
+    background-image: url("../img/requirements_photo@2x.jpg");
+  }
+
+  @media (max-width: $max-tablet-width) {
+    padding: 80px calc(20% - 137px);
+
+    background-image: none;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding: 81px 15px 81px 16px;
+  }
+}
+
+.requirements__inner-container h2 {
+  margin: 0 0 24px;
+
+  text-align: left;
+
+  @media (max-width: $max-mobile-width) {
+    margin: 0 0 23px;
+
+    text-align: center;
+  }
+}
+
+.requirements__inner-container h2 + p {
+  margin: 0 0 33px;
+
+  color: $black-transparent-87;
+
+  @media (max-width: $max-mobile-width) {
+    margin: 0 0 22px;
+
+    line-height: 22px;
+    letter-spacing: -0.5px;
+  }
+}
+
+.requirements__inner-container h2 + p + p {
+  @include font-size-height-color(17, 29);
+
+  margin: 0 0 12px;
+
+  font-weight: 700;
+
+  @media (max-width: $max-mobile-width) {
+    margin: 0 0 10px;
+
+    line-height: 27px;
+    letter-spacing: -0.5px;
+  }
+}
+
+.requirements__inner-container ul {
+  @include list-style-reset;
+
+  position: relative;
+
+  margin: 0 0 43px;
+
+  counter-reset: steps;
+
+  @media (max-width: $max-mobile-width) {
+    margin: 0 0 26px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 2px;
+    z-index: 1;
+
+    height: 70%;
+
+    border-left: 2px dashed $black;
+    opacity: 0.2;
+
+    @media (max-width: $max-mobile-width) {
+      left: 9px;
+    }
+  }
+}
+
+.requirements__inner-container li {
+  @include font-size-height-color(15, 21, $black-transparent-87);
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  min-height: 62px;
+  padding: 0 0 0 45px;
+
+  @media (max-width: $max-mobile-width) {
+    letter-spacing: -0.5px;
+  }
+
+  &:not(:last-of-type) {
+    margin: 0 0 14px;
+
+    @media (max-width: $max-mobile-width) {
+      margin: 0 0 30px;
+    }
+  }
+
+  &::before {
+    @include font-size-height-color(17, 36, $orange);
+
+    position: absolute;
+    top: calc((100% - 36px) / 2);
+    left: -16px;
+    z-index: 2;
+
+    width: 36px;
+    height: 36px;
+
+    font-weight: bold;
+    text-align: center;
+
+    border-radius: 50px;
+    background: $white;
+    box-shadow: $bubble-shadow;
+
+    counter-increment: steps;
+    content: counter(steps);
+
+    @media (max-width: $max-mobile-width) {
+      left: -7px;
+    }
+  }
+}
+
+.requirements__inner-container p:last-child {
+  @include font-size-height-color(15, 21, $black-transparent-50);
+
+  position: relative;
+
+  margin: 0;
+  padding-left: 16px;
+
+  @media (max-width: $max-mobile-width) {
+    padding-left: 8px;
+
+    line-height: 22px;
+    letter-spacing: -0.5px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 4px;
+    height: 100%;
+    background: $orange;
+
+    @media (max-width: $max-mobile-width) {
+      left: -6px;
+    }
+  }
+}
