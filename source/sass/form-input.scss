@@ -1,0 +1,19 @@
+.form-input {
+  position: relative;
+
+  & span {
+    display: none;
+  }
+
+  &--invalid {
+    & span {
+      @include font-size-height-color(13, 13, $red-transparent-50);
+
+      position: absolute;
+      bottom: -16px;
+      left: 24px;
+
+      display: inline;
+    }
+  }
+}

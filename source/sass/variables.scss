@@ -27,5 +27,6 @@ $__: hsl(0, 100%, 50%);
 $icon-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.05);
 $text-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.12);
 $bubble-shadow: 0 3px 12px hsla(0, 0%, 0%, 0.1);
-$button-shadow: radial-gradient(150% 119.49% at 50% 50.85%, hsla(0, 0%, 0%, 0) 30.67%, hsla(0, 0%, 1%, 0.24) 100%);
 $button-normal: linear-gradient(108.42deg, $orange 20.46%, $pineapple 65.31%);
+$button-hover-shadow: linear-gradient(109.15deg, $orange -50.3%, $pineapple 63.1%);
+$button-click-shadow: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(109.15deg, #ffc341 -50.3%, #ffd701 63.1%);

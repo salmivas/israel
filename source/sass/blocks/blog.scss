@@ -1,0 +1,115 @@
+.blog {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 42.7vw;
+  padding: 59px 0 10px;
+
+  background-image: url("../img/blog_background@1x.jpg");
+  background-position: left 4px top 59px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi) {
+    background-image: url("../img/blog_background@2x.jpg");
+  }
+
+  @media (max-width: $max-tablet-width) {
+    padding: 29px 0 30px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 105vw;
+    margin: 0 0 2px;
+
+    background-position: top 93px right calc(100% + 71px);
+    background-size: 200%;
+  }
+}
+
+.blog__container {
+  width: 29%;
+  margin: 0 12.7% 0 0;
+  padding: 8.9% 0 0;
+
+  @media (max-width: $max-tablet-width) {
+    width: 40%;
+    margin: 0 5% 0 0;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0;
+    padding: 6.4% 0 0;
+  }
+}
+
+.blog__container p:first-of-type {
+  @include font-size-height-color(40, 49, $sky-blue);
+
+  margin: 0 0 24px;
+
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  text-align: start;
+
+  @media (max-width: $max-mobile-width) {
+    margin: 0 0 30%;
+
+    text-align: center;
+  }
+}
+
+.blog__container p:first-of-type + p {
+  @include font-size-height-color(17, 29, $white);
+
+  margin: 0 0 12%;
+  padding-left: 3px;
+
+  text-align: start;
+
+  @media (max-width: $max-tablet-width) {
+    margin: 0 0 5%;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin: 0 0 36px;
+    padding: 0 7% 7%;
+
+    letter-spacing: -0.03em;
+    line-height: 26px;
+  }
+}
+
+.blog__button {
+  @include oval-button-style;
+
+  display: flex;
+  align-items: center;
+  padding: 19px 41px 17px;
+
+  fill: $white;
+
+  @media (max-width: $max-mobile-width) {
+    display: flex;
+    justify-content: center;
+    width: 82%;
+    padding: 18px 54px 18px 55px;
+    align-self: center;
+  }
+}
+
+.blog__button span {
+  margin: 4px 0 0 5px;
+
+  @media (max-width: $max-mobile-width) {
+    margin: 4px 0 0 9px;
+  }
+}

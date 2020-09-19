@@ -166,8 +166,18 @@
   @include button-text-style;
   @include font-size-height-color(14, 16);
 
+  text-shadow: $text-shadow;
+
   background: $button-normal;
   border: none;
+
+  &:hover {
+    background: $button-hover-shadow;
+  }
+
+  &:active {
+    background: $button-click-shadow;
+  }
 }
 
 @mixin oval-button-style {
@@ -179,10 +189,6 @@
   letter-spacing: 0.85px;
 
   border-radius: 30px;
-}
-
-@mixin incorrect-input {
-
 }
 
 @mixin input-style {

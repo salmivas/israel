@@ -9,6 +9,10 @@
     background-size: 680px 426px;
   }
 
+  @media (max-width: $max-tablet-width) {
+    background-size: 55%;
+  }
+
   @media (max-width: $max-mobile-width) {
     background-size: calc(20% + 256px);
     background-position: right -24px top 117px;

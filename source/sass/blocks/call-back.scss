@@ -9,11 +9,15 @@
   }
 
   @media (max-width: $max-tablet-width) {
+    padding: 0 0 20px;
+
     background-size: 157px, 600px;
     background-position: top 146px left -72px, top 100px right calc((100% - 546px) / 1.5);
   }
 
   @media (max-width: $max-mobile-width) {
+    padding: 0;
+
     background-image: url("../img/call-back_backpack@1x.jpg"), url("../img/call-back_girl@1x.jpg");
     background-size: 157px, 131%;
     background-position: top 10% left -55px, bottom 2px left 50%;
@@ -106,7 +110,11 @@
 .call-back button {
   @include oval-button-style;
 
+  position: relative;
+
   @media (max-width: $max-mobile-width) {
+    position: static;
+
     width: calc(20% + 205px);
   }
 }
