@@ -16,17 +16,23 @@ $red-transparent-50: hsla(0, 100%, 50%, 0.75);
 $orange: hsl(41, 100%, 63%); // #FFC341
 $pineapple: hsl(51, 100%, 50%); // #FFD701
 $mustard: hsl(36, 68%, 57%);
+$mauve: hsl(263, 9%, 48%);
+$ocean: hsl(195, 30%, 37%);
 $white: hsl(0, 0%, 100%);
 $porcelain: hsl(0, 0%, 96%); // #F5F5F5
 $cloud: hsl(0, 0, 89%); // #E3E3E3
-$transparent: hsla(0, 0%, 0%, 0); // rgba(0, 0, 0, 0.05)
-$transparent-5: hsla(0, 0%, 0%, 0.05); // rgba(0, 0, 0, 0.05)
+$transparent: hsla(0, 0%, 0%, 0);
+$transparent-01: hsla(0, 0%, 0%, 0.1);
+$transparent-05: hsla(0, 0%, 0%, 0.05);
+$transparent-12: hsla(0, 0%, 0%, 0.12);
+$transparent-24: hsla(0, 0%, 0%, 0.24);
+$grey-transparent-92: hsla(0, 0%, 92%, 0.95); // rgba(235, 235, 235, 0.95)
 
-$__: hsl(0, 100%, 50%);
+$__: hsla(0, 0%, 0%, 0.24);
 
-$icon-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.05);
-$text-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.12);
-$bubble-shadow: 0 3px 12px hsla(0, 0%, 0%, 0.1);
+$icon-shadow: 0 1px 4px $transparent-05;
+$text-shadow: 0 1px 4px $transparent-12;
+$bubble-shadow: 0 3px 12px $transparent-01;
 $button-normal: linear-gradient(108.42deg, $orange 20.46%, $pineapple 65.31%);
 $button-hover-shadow: linear-gradient(109.15deg, $orange -50.3%, $pineapple 63.1%);
-$button-click-shadow: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(109.15deg, #ffc341 -50.3%, #ffd701 63.1%);
+$button-click-shadow: radial-gradient(150% 119.49% at 50% 50.85%, $transparent 30.67%, $transparent-24), linear-gradient(109.15deg, $orange -50.3%, $pineapple 63.1%);

@@ -1,0 +1,156 @@
+.modal-feedback {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: $grey-transparent-92;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.modal-feedback__container {
+  position: relative;
+  box-sizing: border-box;
+
+  width: 480px;
+  padding: 58px 73px 43px 48px;
+
+  background-color: $white;
+  box-shadow: $bubble-shadow;
+  border-radius: 8px;
+
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+
+  @media (max-width: $max-mobile-width) {
+    @include center-y-by-flex-column;
+
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 calc(30% - 80px);
+
+    border-radius: 0;
+    box-shadow: none;
+
+    animation: none;
+  }
+}
+
+.modal-feedback__container h2 {
+  @include font-size-height-color(28);
+
+  margin: 0 0 20px;
+
+  letter-spacing: -0.5px;
+  text-align: left;
+  text-transform: none;
+
+  @media (max-width: $max-mobile-width) {
+    @include font-size-height-color(24);
+
+    margin: 0 0 23px;
+  }
+}
+
+.modal-feedback__container h2 + p {
+  margin: 0 0 32px;
+
+  @media (max-width: $max-mobile-width) {
+    @include font-size-height-color(14, 22);
+
+    margin: 0 0 29px;
+
+    text-align: center;
+  }
+}
+
+.modal-feedback__form button[type="reset"] {
+  @include corss-button-style(top, 32px, right, 32px, 18, 17);
+
+  @media (max-width: $max-mobile-width) {
+    @include corss-button-style(top, 24px, right, 24px, 18, 17);
+  }
+}
+
+.modal-feedback__form input:not([name="modal-admission"]) {
+  @include input-style;
+
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 11% 17px;
+
+  &:first-of-type {
+    margin: 0 0 5px;
+  }
+
+  &:last-of-type {
+    margin: 0 0 25px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding: 20px 13% 17px;
+  }
+}
+
+.modal-feedback__form input[name="modal-admission"] {
+  @include visually-hidden;
+  top: 85px;
+  left: 68px;
+}
+
+.modal-feedback__form label:not([for="modal-admission"]) {
+  @include visually-hidden;
+}
+
+.modal-feedback__form label[for="modal-admission"] {
+  @include font-size-height-color(13, 20);
+  position: relative;
+
+  display: block;
+  margin: 0 0 0 23px;
+
+  font-weight: normal;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -24px;
+
+    width: 12px;
+    height: 12px;
+
+    border: 2px solid $orange;
+    border-radius: 2px;
+  }
+}
+
+.modal-feedback input[name="modal-admission"]:checked + label {
+  @include checkmark-style(top, -1px, left, -22px, 18, 16);
+}
+
+.modal-feedback__form-admission {
+  position: relative;
+
+  padding: 0 10% 0 17%;
+
+  @media (max-width: $max-mobile-width) {
+    padding: 0 4% 0 4%;
+  }
+}
+
+.modal-feedback__form-admission button {
+  @include oval-button-style;
+
+  width: 100%;
+  margin: 0 0 15px;
+}

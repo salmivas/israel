@@ -188,12 +188,50 @@
       <section class="faq"></section>
     </main>
     <footer></footer>
+    <div class="modal-feedback modal-feedback--hidden">
+      <div class="modal-feedback__container">
+        <h2>Заказать звонок</h2>
+        <p>
+          Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!
+        </p>
+        <div class="modal-feedback__form">
+          <form action="#" method="post" autocomplete="off">
+            <button type="reset">
+              Закрыть форму
+            </button>
+            <label for="modal-feedback__user-name">Имя</label>
+            <input id="modal-feedback__user-name" type="text" name="name" placeholder="Имя" required="">
+            <label for="modal-feedback__user-phone">Телефон</label>
+            <input id="modal-feedback__user-phone" type="tel" name="phone" placeholder="Телефон" pattern=".{18,}" required="">
+            <div class="modal-feedback__form-admission">
+              <button type="submit">Перезвоните мне</button>
+              <input name="modal-admission" type="checkbox" id="modal-admission" required="">
+              <label tabindex="0" for="modal-admission">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal-accepted modal-accepted--hidden">
+      <div class="modal-accepted__container">
+        <button type="button" class="modal-accepted__cross-button">
+          Закрыть окно
+        </button>
+        <h2>Заявка принята</h2>
+        <p>
+          Мы прирняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!
+        </p>
+        <button type="button" class="modal-accepted__clear-button">Понятно</button>
+      </div>
+    </div>
     <script src="vendor/swiper.js"></script>
     <script src="vendor/picturefill.js"></script>
     <script src="vendor/imask.js"></script>
     <script src="vendor/svg4everybody.js"></script>
     <script src="programs.js"></script>
     <script src="slider.js"></script>
+    <script src="form.js"></script>
+    <script src="upload.js"></script>
     <!-- <script src="js/vendor.js"></script>
     <script src="js/main.js"></script> -->
   </body>

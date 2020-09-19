@@ -98,6 +98,10 @@
   justify-content: flex-start;
   margin-bottom: 30px;
 
+  background-size: contain, 75% 75%;
+  background-position: 0 0, 50% 50%;
+  background-repeat: no-repeat;
+
   &:not(:first-of-type) {
     @media (min-width: $tablet-width) {
       height: 23.3vw;
@@ -136,6 +140,8 @@
   }
 
   @media (max-width: $max-mobile-width) {
+    padding: 0 12% 8%;
+
     text-align: center;
   }
 }
@@ -150,9 +156,7 @@
   height: 105%;
   margin: 0;
 
-  background-image: url("../img/activities_desktop_temple@1x.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-image: url("../img/activities_desktop_temple@1x.png"), linear-gradient($ocean, $ocean);
 
   @media (min-resolution: $retina-dpi) {
     background-image: url("../img/activities_desktop_temple@2x.png");
@@ -183,9 +187,7 @@
   width: 27.5%;
   max-width: 27.5%;
 
-  background-image: url("../img/activities_desktop_student@1x.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-image: url("../img/activities_desktop_student@1x.png"), linear-gradient($ocean, $ocean);
 
   @media (min-resolution: $retina-dpi) {
     background-image: url("../img/activities_desktop_student@2x.png");
@@ -204,9 +206,7 @@
   width: 53.7%;
   max-width: 53.7%;
 
-  background-image: url("../img/activities_desktop_studying@1x.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-image: url("../img/activities_desktop_studying@1x.png"), linear-gradient($mauve, $mauve);
 
   @media (min-resolution: $retina-dpi) {
     background-image: url("../img/activities_desktop_studying@2x.png");
@@ -224,9 +224,7 @@
 .activities__slider-item--art {
   max-width: 53.7%;
 
-  background-image: url("../img/activities_desktop_friends@1x.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-image: url("../img/activities_desktop_friends@1x.png"), linear-gradient($cloud, $cloud);
 
   @media (min-resolution: $retina-dpi) {
     background-image: url("../img/activities_desktop_friends@2x.png");
@@ -244,9 +242,7 @@
 .activities__slider-item--lidership {
   max-width: 27.8%;
 
-  background-image: url("../img/activities_desktop_admiration@1x.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-image: url("../img/activities_desktop_admiration@1x.png"), linear-gradient($sepia, $sepia);
 
   @media (min-resolution: $retina-dpi) {
     background-image: url("../img/activities_desktop_admiration@2x.png");

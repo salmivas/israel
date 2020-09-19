@@ -4,9 +4,9 @@
   min-height: 42.7vw;
   padding: 59px 0 10px;
 
-  background-image: url("../img/blog_background@1x.jpg");
+  background-image: url("../img/blog_background@1x.jpg"), linear-gradient($mauve, $mauve);
   background-position: left 4px top 59px;
-  background-size: 100%;
+  background-size: 100%, 100% 85%;
   background-repeat: no-repeat;
 
   @media (min-resolution: $retina-dpi) {
@@ -25,7 +25,7 @@
     margin: 0 0 2px;
 
     background-position: top 93px right calc(100% + 71px);
-    background-size: 200%;
+    background-size: 200%, 200% 50%;
   }
 }
 
@@ -35,7 +35,7 @@
   padding: 8.9% 0 0;
 
   @media (max-width: $max-tablet-width) {
-    width: 40%;
+    width: 42%;
     margin: 0 5% 0 0;
   }
 
