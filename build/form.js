@@ -7,7 +7,9 @@
 
   var MODIFIER_HIDDEN = '--hidden';
   var OVERFLOW_HIDDEN = 'hidden';
+  var MODIFIER_INVALID = '--invalid';
   var LOCALSTORAGE_DATA_NAME = 'userData';
+  var MAX_PHONE_LENGTH = 11;
 
   var KeyCode = {
     ESCAPE: {
@@ -15,6 +17,15 @@
       SHORT: 'Esc',
     },
   };
+
+  var getInputValue = function (inputElement) {
+    var inputValue;
+    window.masks.forEach(function (mask) {
+      mask.el.input === inputElement ? inputValue = mask.unmaskedValue : "";
+    });
+
+    return inputValue;
+  }
 
   var showPopup = function (popupClass, hidingClass) {
     popupClass.classList.remove(hidingClass);
@@ -118,7 +129,9 @@
     modalFeedbackForm.addEventListener('submit', function (evt) {
       evt.preventDefault();
 
-      if (modalAdmission.checked) {
+      var modalPhoneInputValue = getInputValue(modalUserPhone);
+
+      if (modalAdmission.checked && modalPhoneInputValue.length === MAX_PHONE_LENGTH) {
         setLocalStorageData(modalUserName.value, modalUserPhone.value);
         window.upload.post(
           function () {
@@ -128,9 +141,20 @@
           shake,
           new FormData(modalFeedbackForm)
         );
+      } else if (modalPhoneInputValue.length < MAX_PHONE_LENGTH) {
+        throwCustomInputError(modalUserPhone);
       }
     });
   }
+
+
+
+  var throwCustomInputError = function (inputElement) {
+    var inputParent = inputElement.parentElement;
+    var invalidModifier = inputParent.classList[0].concat(MODIFIER_INVALID);
+
+    inputParent.classList.add(invalidModifier);
+  };
 
   if (callBack) {
     var callBackForm = document.querySelector('.call-back form');
@@ -138,8 +162,15 @@
 
     callBackForm.addEventListener('submit', function (evt) {
       evt.preventDefault();
-      setLocalStorageData('', callBackPhone.value);
-      window.upload.post(showAcceptedWindow, null, new FormData(callBackForm));
+
+      var callBackInputValue = getInputValue(callBackPhone);
+
+      if (callBackInputValue.length < MAX_PHONE_LENGTH) {
+        throwCustomInputError(callBackPhone);
+      } else {
+        setLocalStorageData('', callBackPhone.value);
+        window.upload.post(showAcceptedWindow, null, new FormData(callBackForm));
+      }
     });
   }
 })();

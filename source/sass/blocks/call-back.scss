@@ -93,7 +93,7 @@
 }
 
 .call-back input {
-  @include input-style;
+  position: relative;
 
   display: block;
   min-width: 270px;

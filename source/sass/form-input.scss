@@ -1,11 +1,27 @@
 .form-input {
+  & input {
+    @include input-style;
+  }
+
   position: relative;
 
   & span {
     display: none;
   }
 
+  &--valid {
+    & input,
+    & input:focus {
+      border: 2px solid $black-transparent-50;
+    }
+  }
+
   &--invalid {
+    & input,
+    & input:focus {
+      border: 2px solid $red-transparent-50;
+    }
+
     & span {
       @include font-size-height-color(13, 13, $red-transparent-50);
 
@@ -15,5 +31,9 @@
 
       display: inline;
     }
+  }
+
+  &--active {
+    @include input-phone-underline(bottom, 8px, left, 58px, 110, 2, $black-hex, 0.2);
   }
 }

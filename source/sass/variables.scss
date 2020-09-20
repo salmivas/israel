@@ -7,7 +7,8 @@ $max-desktop-width: 1366px;
 $retina-dpi: 144dpi;
 
 $black: hsl(0, 0%, 28%); // #484848
-$black-transparent-87: hsla(0, 0%, 28%, 0.87);
+$black-hex: "%23484848"; // #484848
+$black-transparent-87: hsla(0, 33%, 2%, 0.87);
 $black-transparent-50: hsla(0, 0%, 28%, 0.5);
 $sepia: hsl(14, 9%, 46%); // #80706B
 $sky-blue: hsl(196, 97%, 55%); // #1DC0FC

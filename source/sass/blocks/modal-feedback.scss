@@ -81,24 +81,28 @@
   }
 }
 
-.modal-feedback__form input:not([name="modal-admission"]) {
+.modal-feedback__form input[type="text"] {
   @include input-style;
+}
 
+.modal-feedback__form input:not([name="modal-admission"]) {
   box-sizing: border-box;
   width: 100%;
-  padding: 20px 11% 17px;
+  padding: 19px 11% 16px;
 
-  &:first-of-type {
-    margin: 0 0 5px;
-  }
-
-  &:last-of-type {
-    margin: 0 0 25px;
-  }
+  margin: 0 0 9px;
 
   @media (max-width: $max-mobile-width) {
-    padding: 20px 13% 17px;
+    padding: 19px 13% 16px;
   }
+}
+
+.modal-feedback__form .form-input {
+  margin: 0 0 25px;
+}
+
+.modal-feedback__form input[type="tel"] {
+  margin: 0;
 }
 
 .modal-feedback__form input[name="modal-admission"] {
