@@ -8,8 +8,10 @@ $retina-dpi: 144dpi;
 
 $black: hsl(0, 0%, 28%); // #484848
 $black-hex: "%23484848"; // #484848
-$black-transparent-87: hsla(0, 33%, 2%, 0.87);
+$black-transparent-20: hsla(0, 0%, 28%, 0.2);
 $black-transparent-50: hsla(0, 0%, 28%, 0.5);
+$black-transparent-74: hsla(0, 0%, 28%, 0.74);
+$black-transparent-87: hsla(0, 33%, 2%, 0.87);
 $sepia: hsl(14, 9%, 46%); // #80706B
 $sky-blue: hsl(196, 97%, 55%); // #1DC0FC
 $red: hsl(0, 100%, 50%); // #FF0000
@@ -28,6 +30,8 @@ $transparent-05: hsla(0, 0%, 0%, 0.05);
 $transparent-12: hsla(0, 0%, 0%, 0.12);
 $transparent-24: hsla(0, 0%, 0%, 0.24);
 $grey-transparent-92: hsla(0, 0%, 92%, 0.95); // rgba(235, 235, 235, 0.95)
+$black-transparent-20: hsla(0, 0%, 28%, 0.2); // rgba(71, 71, 71, 0.2)
+$black-transparent-74: hsla(0, 0%, 28%, 0.74); // rgba(71, 71, 71, 0.74)
 
 $__: hsla(0, 0%, 0%, 0.24);
 
