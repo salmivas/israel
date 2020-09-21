@@ -240,7 +240,7 @@
   }
 }
 
-@mixin input-phone-underline ($y-position, $y-val, $x-position, $x-val, $width, $height, $inline-hex-color, $opacity) {
+@mixin input-phone-underline($y-position, $y-val, $x-position, $x-val, $width, $height, $inline-hex-color, $opacity) {
   &::after {
     content: url("data:image/svg+xml,%3Csvg width='#{$width}' height='#{$height}' viewBox='0 0 #{$width} #{$height}' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='#{$opacity}' d='M0 1H36' stroke='#{$inline-hex-color}'/%3E%3Cpath opacity='#{$opacity}' d='M42 1H66' stroke='#{$inline-hex-color}'/%3E%3Cpath opacity='#{$opacity}' d='M72 1H88' stroke='#{$inline-hex-color}'/%3E%3Cpath opacity='#{$opacity}' d='M94 1H110' stroke='#{$inline-hex-color}'/%3E%3C/svg%3E%0A");
 
@@ -248,5 +248,16 @@
 
     #{$y-position}: $y-val;
     #{$x-position}: $x-val;
+  }
+}
+
+@mixin social-links-style {
+  @include list-style-reset;
+
+  display: flex;
+
+  & svg {
+    @include on-hover(true, false, false);
+    fill: $black-transparent-20;
   }
 }

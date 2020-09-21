@@ -1,18 +1,18 @@
 .faq {
   min-height: 775px;
-  padding: 128px 0;
+  padding: 128px 0 100px;
 
-  background-image: url("../img/faq_photo@1x.png"), url("../img/faq_stains-left@1x.png"), url("../img/faq_stains-right@1x.png"), url("../img/faq_bag@1x.png");
-  background-position: right 0 top 127px, left 0 top 49px, right 0 top 89px, left 0 top 854px;
+  background-image: url("../img/faq_stains-left@1x.png"), url("../img/faq_stains-right@1x.png"), url("../img/faq_bag@1x.png");
+  background-position: left 0 top 49px, right 0 top 89px, left 0 top 854px;
   background-repeat: no-repeat;
-  background-size: calc((100% - 76px) / 2), 534px 1119px, 76vw, 153px 177px;
+  background-size: 534px 1119px, 76vw, 153px 177px;
 
   @media (min-resolution: $retina-dpi) {
-    background-image: url("../img/faq_stains-left@2x.png"), url("../img/faq_stains-right@2x.png"), url("../img/faq_bag@2x.png");
+    background-image: url("../img/faq_photo@1x.png"), url("../img/faq_stains-left@2x.png"), url("../img/faq_stains-right@2x.png"), url("../img/faq_bag@2x.png");
   }
 
   @media (max-width: $max-tablet-width) {
-    padding: 46px 0;
+    padding: 49px 0;
 
     background: none;
     background-image: url("../img/faq_bag@1x.png");
@@ -24,8 +24,18 @@
 
 .faq__outer-container {
   display: flex;
+  min-height: 803px;
   max-width: $max-desktop-width;
   margin: 0 auto;
+
+  background-image: url("../img/faq_photo@1x.png");
+  background-position: right 0 top 0;
+  background-repeat: no-repeat;
+  background-size: calc(40% + 100px);
+
+  @media (max-width: $max-tablet-width) {
+    background: none;
+  }
 }
 
 .faq__inner-container {

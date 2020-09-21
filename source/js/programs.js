@@ -72,8 +72,6 @@
     }
   }
 
-
-
   var togglersInit = function (elementToShow) {
     if (programsNames && programsDescriptions) {
       closeAll(programsDescriptions);
