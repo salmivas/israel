@@ -1,9 +1,9 @@
 .form-input {
+  position: relative;
+
   & input {
     @include input-style;
   }
-
-  position: relative;
 
   & span {
     display: none;

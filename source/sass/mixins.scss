@@ -258,6 +258,7 @@
 
   & svg {
     @include on-hover(true, false, false);
+
     fill: $black-transparent-20;
   }
 }

@@ -4,6 +4,7 @@
   var modalFeedback = document.querySelector('.modal-feedback');
   var modalAccepted = document.querySelector('.modal-accepted');
   var callBack = document.querySelector('.call-back');
+  var contacts = document.querySelector('.contacts');
 
   var MODIFIER_HIDDEN = '--hidden';
   var OVERFLOW_HIDDEN = 'hidden';
@@ -26,6 +27,13 @@
 
     return inputValue;
   }
+
+  var throwCustomInputError = function (inputElement) {
+    var inputParent = inputElement.parentElement;
+    var invalidModifier = inputParent.classList[0].concat(MODIFIER_INVALID);
+
+    inputParent.classList.add(invalidModifier);
+  };
 
   var showPopup = function (popupClass, hidingClass) {
     popupClass.classList.remove(hidingClass);
@@ -83,6 +91,17 @@
       showPopup(modalAccepted, modalAcceptedHidden);
     }
   };
+
+  var setSimpleValidation = function (phoneInputElement, textInputElement) {
+    var phoneInputValue = getInputValue(phoneInputElement);
+
+    if (phoneInputValue.length < MAX_PHONE_LENGTH) {
+      throwCustomInputError(phoneInputElement);
+    } else {
+      setLocalStorageData(textInputElement ? textInputElement.value : null, phoneInputElement.value);
+      window.upload.post(showAcceptedWindow, null, new FormData(contactsForm));
+    }
+  }
 
   if (modalFeedback) {
     var modalFeedbackFormContainer = document.querySelector('.modal-feedback__container');
@@ -147,30 +166,24 @@
     });
   }
 
-
-
-  var throwCustomInputError = function (inputElement) {
-    var inputParent = inputElement.parentElement;
-    var invalidModifier = inputParent.classList[0].concat(MODIFIER_INVALID);
-
-    inputParent.classList.add(invalidModifier);
-  };
-
   if (callBack) {
     var callBackForm = document.querySelector('.call-back form');
     var callBackPhone = document.getElementById('call-back__user-phone');
 
     callBackForm.addEventListener('submit', function (evt) {
       evt.preventDefault();
+      setSimpleValidation(callBackPhone);
+    });
+  }
 
-      var callBackInputValue = getInputValue(callBackPhone);
+  if (contacts) {
+    var contactsForm = document.querySelector('.contacts__call-back form');
+    var contactsUserName = document.getElementById('contacts__user-name');
+    var contactsUserPhone = document.getElementById('contacts__user-phone');
 
-      if (callBackInputValue.length < MAX_PHONE_LENGTH) {
-        throwCustomInputError(callBackPhone);
-      } else {
-        setLocalStorageData('', callBackPhone.value);
-        window.upload.post(showAcceptedWindow, null, new FormData(callBackForm));
-      }
+    contactsForm.addEventListener('submit', function (evt) {
+      evt.preventDefault();
+      setSimpleValidation(contactsUserPhone, contactsUserName);
     });
   }
 })();

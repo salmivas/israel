@@ -14,6 +14,10 @@
     background-image: url("../img/reviews_city@1x.png"), url("../img/reviews_mobile_stains@1x.png");
     background-position: right calc(15% - 127px) top 524px, top 660px right 0;
     background-size: calc(15% + 385px), 560px 234px;
+
+    @media (min-resolution: $retina-dpi) {
+      background-image: url("../img/reviews_city@2x.png"), url("../img/reviews_mobile_stains@2x.png");
+    }
   }
 }
 
@@ -58,6 +62,7 @@
   @media (max-width: $max-tablet-width) {
     flex-direction: column;
     align-items: center;
+    padding: 0;
   }
 }
 
@@ -72,7 +77,7 @@
   @media (max-width: $max-mobile-width) {
     width: 240px;
     height: 320px;
-    margin: 0 0 53px;
+    margin: 0 0 62px;
   }
 }
 
@@ -180,7 +185,7 @@
   @include social-links-style;
 
   position: absolute;
-  bottom: 0;
+  bottom: -8px;
   right: -1.5%;
 
   @media (max-width: $max-tablet-width) {
@@ -198,7 +203,7 @@
 
 .reviews__slider-control-container {
   position: absolute;
-  bottom: 8px;
+  bottom: 0;
   left: calc(350px + 11.1%);
 
   display: flex;
