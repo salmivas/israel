@@ -6,7 +6,8 @@
   var MODIFIER_VALID = '--valid';
   var MODIFIER_INVALID = '--invalid';
   var MAX_PHONE_LENGTH = 11;
-  window.masks = [];
+  var masks = [];
+  window.masks = masks;
 
   var maskPhone = function (element) {
     return new window.IMask(element, {
@@ -24,7 +25,10 @@
 
     mask.on('accept', function () {
       inputElement.parentNode.classList.add(activeModifier);
-      inputElement.parentNode.classList.contains(invalidModifier) ? inputElement.parentNode.classList.remove(invalidModifier) : "";
+
+      if (inputElement.parentNode.classList.contains(invalidModifier)) {
+        inputElement.parentNode.classList.remove(invalidModifier);
+      }
 
       switch (true) {
         case mask.unmaskedValue.length === 0:
@@ -40,10 +44,10 @@
           inputElement.parentNode.classList.remove(validModifier);
           break;
       }
-    })
+    });
 
     return mask;
-  }
+  };
 
   for (var i = 0; i < inputPhones.length; i++) {
     if (inputPhones[i]) {

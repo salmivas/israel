@@ -22,11 +22,13 @@
   var getInputValue = function (inputElement) {
     var inputValue;
     window.masks.forEach(function (mask) {
-      mask.el.input === inputElement ? inputValue = mask.unmaskedValue : "";
+      if (mask.el.input === inputElement) {
+        inputValue = mask.unmaskedValue;
+      }
     });
 
     return inputValue;
-  }
+  };
 
   var throwCustomInputError = function (inputElement) {
     var inputParent = inputElement.parentElement;
@@ -56,11 +58,11 @@
   var setLocalStorageData = function (userName, userPhone) {
     localStorage.clear();
     localStorage.setItem(
-      LOCALSTORAGE_DATA_NAME,
-      JSON.stringify({
-        userName: userName,
-        userPhone: userPhone,
-      })
+        LOCALSTORAGE_DATA_NAME,
+        JSON.stringify({
+          userName: userName,
+          userPhone: userPhone,
+        })
     );
   };
 
@@ -101,7 +103,7 @@
       setLocalStorageData(textInputElement ? textInputElement.value : null, phoneInputElement.value);
       window.upload.post(showAcceptedWindow, null, new FormData(contactsForm));
     }
-  }
+  };
 
   if (modalFeedback) {
     var modalFeedbackFormContainer = document.querySelector('.modal-feedback__container');
@@ -153,12 +155,12 @@
       if (modalAdmission.checked && modalPhoneInputValue.length === MAX_PHONE_LENGTH) {
         setLocalStorageData(modalUserName.value, modalUserPhone.value);
         window.upload.post(
-          function () {
-            hidePopup(modalFeedback, modalFeedbackHidden);
-            showAcceptedWindow();
-          },
-          shake,
-          new FormData(modalFeedbackForm)
+            function () {
+              hidePopup(modalFeedback, modalFeedbackHidden);
+              showAcceptedWindow();
+            },
+            shake,
+            new FormData(modalFeedbackForm)
         );
       } else if (modalPhoneInputValue.length < MAX_PHONE_LENGTH) {
         throwCustomInputError(modalUserPhone);

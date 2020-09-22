@@ -1,3 +1,4 @@
+/* global Swiper*/
 'use strict';
 
 (function () {
