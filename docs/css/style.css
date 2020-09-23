@@ -1262,7 +1262,7 @@ h2 {
   letter-spacing: 0.85px;
   border-radius: 30px;
   position: relative; }
-  .call-back button:hover {
+  .call-back button:hover, .call-back button:focus {
     background: linear-gradient(109.15deg, #ffc342 -50.3%, #ffd900 63.1%); }
   .call-back button:active {
     background: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(0, 0, 0, 0.24)), linear-gradient(109.15deg, #ffc342 -50.3%, #ffd900 63.1%); }
@@ -1833,7 +1833,7 @@ h2 {
           align-items: center;
   padding: 19px 41px 17px;
   fill: white; }
-  .blog__button:hover {
+  .blog__button:hover, .blog__button:focus {
     background: linear-gradient(109.15deg, #ffc342 -50.3%, #ffd900 63.1%); }
   .blog__button:active {
     background: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(0, 0, 0, 0.24)), linear-gradient(109.15deg, #ffc342 -50.3%, #ffd900 63.1%); }
@@ -2614,7 +2614,7 @@ h2 {
   border-radius: 30px;
   padding: 23px 0 20px;
   width: 28%; }
-  .contacts__call-back-form button:hover {
+  .contacts__call-back-form button:hover, .contacts__call-back-form button:focus {
     background: linear-gradient(109.15deg, #ffc342 -50.3%, #ffd900 63.1%); }
   .contacts__call-back-form button:active {
     background: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(0, 0, 0, 0.24)), linear-gradient(109.15deg, #ffc342 -50.3%, #ffd900 63.1%); }
@@ -2885,6 +2885,9 @@ h2 {
   position: relative;
   display: block;
   margin: 0 0 0 23px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
   font-weight: normal; }
   .modal-feedback__form label[for="modal-admission"]::before {
     content: "";
@@ -2906,6 +2909,13 @@ h2 {
 
 .modal-feedback__form-admission {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 0 10% 0 17%; }
   @media (max-width: 767px) {
     .modal-feedback__form-admission {
@@ -2933,8 +2943,11 @@ h2 {
   letter-spacing: 0.85px;
   border-radius: 30px;
   width: 100%;
-  margin: 0 0 15px; }
-  .modal-feedback__form-admission button:hover {
+  margin: 0 0 15px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1; }
+  .modal-feedback__form-admission button:hover, .modal-feedback__form-admission button:focus {
     background: linear-gradient(109.15deg, #ffc342 -50.3%, #ffd900 63.1%); }
   .modal-feedback__form-admission button:active {
     background: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(0, 0, 0, 0.24)), linear-gradient(109.15deg, #ffc342 -50.3%, #ffd900 63.1%); }
@@ -3088,7 +3101,7 @@ h2 {
   letter-spacing: 0.85px;
   border-radius: 30px;
   width: 91%; }
-  .modal-accepted__clear-button:hover {
+  .modal-accepted__clear-button:hover, .modal-accepted__clear-button:focus {
     background: linear-gradient(109.15deg, #ffc342 -50.3%, #ffd900 63.1%); }
   .modal-accepted__clear-button:active {
     background: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(0, 0, 0, 0.24)), linear-gradient(109.15deg, #ffc342 -50.3%, #ffd900 63.1%); }
