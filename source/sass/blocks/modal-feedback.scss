@@ -121,6 +121,7 @@
 
   display: block;
   margin: 0 0 0 23px;
+  order: 2;
 
   font-weight: normal;
 
@@ -145,6 +146,8 @@
 .modal-feedback__form-admission {
   position: relative;
 
+  display: flex;
+  flex-direction: column;
   padding: 0 10% 0 17%;
 
   @media (max-width: $max-mobile-width) {
@@ -157,4 +160,5 @@
 
   width: 100%;
   margin: 0 0 15px;
+  order: 1;
 }

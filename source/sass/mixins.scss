@@ -171,7 +171,8 @@
   background: $button-normal;
   border: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: $button-hover-shadow;
   }
 
