@@ -50,9 +50,9 @@
   max-width: $max-desktop-width;
   margin: 0 auto;
 
-  background-image: url("../img/requirements_photo@1x.jpg");
+  background-image: url("../img/requirements_photo@1x.jpg"), linear-gradient($cloud, $cloud);
   background-position: 11px calc(10% + 83px);
-  background-size: calc((40% + 80px));
+  background-size: calc((40% + 80px)), 40% 75%;
   background-repeat: no-repeat;
 
   @media (min-resolution: $retina-dpi) {
