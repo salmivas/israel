@@ -1314,9 +1314,10 @@ h2 {
           justify-content: flex-end;
   max-width: 1366px;
   margin: 0 auto;
-  background-image: url("../img/requirements_photo@1x.jpg");
+  background-image: url("../img/requirements_photo@1x.jpg"), -webkit-gradient(linear, left top, left bottom, from(#e3e3e3), to(#e3e3e3));
+  background-image: url("../img/requirements_photo@1x.jpg"), linear-gradient(#e3e3e3, #e3e3e3);
   background-position: 11px calc(10% + 83px);
-  background-size: calc((40% + 80px));
+  background-size: calc((40% + 80px)), 40% 75%;
   background-repeat: no-repeat; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
     .requirements__outer-container {
@@ -1881,10 +1882,11 @@ h2 {
   min-height: 803px;
   max-width: 1366px;
   margin: 0 auto;
-  background-image: url("../img/faq_photo@1x.png");
-  background-position: right 0 top 0;
+  background-image: url("../img/faq_photo@1x.png"), -webkit-gradient(linear, left top, left bottom, from(#e3e3e3), to(#e3e3e3));
+  background-image: url("../img/faq_photo@1x.png"), linear-gradient(#e3e3e3, #e3e3e3);
+  background-position: right 0 top 0, right 35px top 35px;
   background-repeat: no-repeat;
-  background-size: calc(40% + 100px); }
+  background-size: calc(40% + 100px), 40% 60%; }
   @media (max-width: 1023px) {
     .faq__outer-container {
       background: none; } }
