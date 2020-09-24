@@ -38,6 +38,14 @@
   }
 }
 
+.activities__container span {
+  display: none;
+
+  @media (max-width: 362px) {
+    display: block;
+  }
+}
+
 .activities__container h2 + p {
   @include font-size-height-color(17, 29, $black-transparent-87);
 

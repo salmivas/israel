@@ -2152,6 +2152,7 @@ h2 {
 
 .reviews__review-container > a {
   display: inline-block;
+  vertical-align: middle;
   margin: 0 0 17px;
   font-size: 17px;
   font-weight: normal;
@@ -2534,7 +2535,7 @@ h2 {
       margin: 0 0 13px;
       padding: 0; } }
 
-.contacts__call-back-disclaimer {
+.contacts__call-back-description-wrapper > p:last-of-type {
   font-size: 13px;
   line-height: 20px;
   margin: 0;
