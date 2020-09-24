@@ -280,7 +280,7 @@
   }
 }
 
-.contacts__call-back-description {
+.contacts__call-back-description-wrapper > p:first-of-type {
   @include font-size-height-color(17, 26);
 
   margin: 0 0 11px;
@@ -296,7 +296,7 @@
   }
 }
 
-.contacts__call-back-disclaimer {
+.contacts__call-back-description-wrapper > p:last-of-type {
   @include font-size-height-color(13, 20);
 
   margin: 0;

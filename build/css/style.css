@@ -2521,14 +2521,14 @@ h2 {
       width: 100%;
       margin: 0 0 32px; } }
 
-.contacts__call-back-description {
+.contacts__call-back-description-wrapper > p:first-of-type {
   font-size: 17px;
   line-height: 26px;
   margin: 0 0 11px;
   padding: 5px 0 0;
   line-height: 26px; }
   @media (max-width: 1023px) {
-    .contacts__call-back-description {
+    .contacts__call-back-description-wrapper > p:first-of-type {
       font-size: 16px;
       line-height: 24px;
       margin: 0 0 13px;
