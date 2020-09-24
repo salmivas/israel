@@ -916,13 +916,13 @@ h2 {
         border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #1dc0fc; } }
 
 .programs {
-  background-image: url("../img/programs_city@1x.png");
+  background-image: url("../img/programs_city@1x.jpg");
   background-position: right 0 top 50px;
   background-size: auto;
   background-repeat: no-repeat; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
     .programs {
-      background-image: url("../img/programs_city@2x.png");
+      background-image: url("../img/programs_city@2x.jpg");
       background-size: 680px 426px; } }
   @media (max-width: 1023px) {
     .programs {
@@ -1622,10 +1622,10 @@ h2 {
   @media (max-width: 767px) {
     .activities__slider-item--excursions {
       position: static;
-      background-image: url("../img/activities_mobile_temple@1x.png"); } }
+      background-image: url("../img/activities_mobile_temple@1x.jpg"); } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi) {
     .activities__slider-item--excursions {
-      background-image: url("../img/activities_mobile_temple@2x.png"); } }
+      background-image: url("../img/activities_mobile_temple@2x.jpg"); } }
   @media (max-width: 767px) {
       .activities__slider-item--excursions p {
         padding: 0 12% 8%; } }
@@ -1640,10 +1640,10 @@ h2 {
       background-image: url("../img/activities_desktop_student@2x.png"); } }
   @media (max-width: 767px) {
     .activities__slider-item--language {
-      background-image: url("../img/activities_mobile_student@1x.png"); } }
+      background-image: url("../img/activities_mobile_student@1x.jpg"); } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi) {
     .activities__slider-item--language {
-      background-image: url("../img/activities_mobile_student@2x.png"); } }
+      background-image: url("../img/activities_mobile_student@2x.jpg"); } }
 
 .activities__slider-item--professions {
   width: 53.7%;
@@ -1655,10 +1655,10 @@ h2 {
       background-image: url("../img/activities_desktop_studying@2x.png"); } }
   @media (max-width: 767px) {
     .activities__slider-item--professions {
-      background-image: url("../img/activities_mobile_studying@1x.png"); } }
+      background-image: url("../img/activities_mobile_studying@1x.jpg"); } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi) {
     .activities__slider-item--professions {
-      background-image: url("../img/activities_mobile_studying@2x.png"); } }
+      background-image: url("../img/activities_mobile_studying@2x.jpg"); } }
 
 .activities__slider-item--art {
   max-width: 53.7%;
@@ -1669,10 +1669,10 @@ h2 {
       background-image: url("../img/activities_desktop_friends@2x.png"); } }
   @media (max-width: 767px) {
     .activities__slider-item--art {
-      background-image: url("../img/activities_mobile_friends@1x.png"); } }
+      background-image: url("../img/activities_mobile_friends@1x.jpg"); } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi) {
     .activities__slider-item--art {
-      background-image: url("../img/activities_mobile_friends@2x.png"); } }
+      background-image: url("../img/activities_mobile_friends@2x.jpg"); } }
 
 .activities__slider-item--lidership {
   max-width: 27.8%;
@@ -1683,10 +1683,10 @@ h2 {
       background-image: url("../img/activities_desktop_admiration@2x.png"); } }
   @media (max-width: 767px) {
     .activities__slider-item--lidership {
-      background-image: url("../img/activities_mobile_admiration@1x.png"); } }
+      background-image: url("../img/activities_mobile_admiration@1x.jpg"); } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi) {
     .activities__slider-item--lidership {
-      background-image: url("../img/activities_mobile_admiration@2x.png"); } }
+      background-image: url("../img/activities_mobile_admiration@2x.jpg"); } }
 
 @media (max-width: 767px) {
   .activities__slider-pagination {
@@ -2345,10 +2345,13 @@ h2 {
     .contacts__map {
       min-height: 420px;
       height: calc(40vw + 292px);
-      background-image: url("../img/contacts_desktop_map@1x.png");
+      background-image: url("../img/contacts_mobile_map@1x.jpg");
       background-position: top 13px right -117px;
       background-size: cover;
       background-repeat: no-repeat; } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi) {
+    .contacts__map {
+      background-image: url("../img/contacts_mobile_map@2x.jpg"); } }
 
 .contacts__city {
   display: -webkit-box;

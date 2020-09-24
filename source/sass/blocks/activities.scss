@@ -171,10 +171,10 @@
   @media (max-width: $max-mobile-width) {
     position: static;
 
-    background-image: url("../img/activities_mobile_temple@1x.png");
+    background-image: url("../img/activities_mobile_temple@1x.jpg");
 
     @media (min-resolution: $retina-dpi) {
-      background-image: url("../img/activities_mobile_temple@2x.png");
+      background-image: url("../img/activities_mobile_temple@2x.jpg");
     }
 
     & p {
@@ -194,10 +194,10 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    background-image: url("../img/activities_mobile_student@1x.png");
+    background-image: url("../img/activities_mobile_student@1x.jpg");
 
     @media (min-resolution: $retina-dpi) {
-      background-image: url("../img/activities_mobile_student@2x.png");
+      background-image: url("../img/activities_mobile_student@2x.jpg");
     }
   }
 }
@@ -213,10 +213,10 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    background-image: url("../img/activities_mobile_studying@1x.png");
+    background-image: url("../img/activities_mobile_studying@1x.jpg");
 
     @media (min-resolution: $retina-dpi) {
-      background-image: url("../img/activities_mobile_studying@2x.png");
+      background-image: url("../img/activities_mobile_studying@2x.jpg");
     }
   }
 }
@@ -231,10 +231,10 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    background-image: url("../img/activities_mobile_friends@1x.png");
+    background-image: url("../img/activities_mobile_friends@1x.jpg");
 
     @media (min-resolution: $retina-dpi) {
-      background-image: url("../img/activities_mobile_friends@2x.png");
+      background-image: url("../img/activities_mobile_friends@2x.jpg");
     }
   }
 }
@@ -249,10 +249,10 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    background-image: url("../img/activities_mobile_admiration@1x.png");
+    background-image: url("../img/activities_mobile_admiration@1x.jpg");
 
     @media (min-resolution: $retina-dpi) {
-      background-image: url("../img/activities_mobile_admiration@2x.png");
+      background-image: url("../img/activities_mobile_admiration@2x.jpg");
     }
   }
 }
